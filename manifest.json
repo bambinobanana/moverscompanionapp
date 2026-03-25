@@ -1,0 +1,24 @@
+{
+  "name": "Facilitation Toolkit",
+  "short_name": "Facil Toolkit",
+  "description": "Find the right icebreaker or energizer for any workshop — in seconds.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#F2F2F2",
+  "theme_color": "#F25A38",
+  "orientation": "portrait",
+  "icons": [
+    {
+      "src": "icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}
