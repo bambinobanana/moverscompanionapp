@@ -1,4 +1,42 @@
-import { useState, useEffect } from "react";
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Find the perfect icebreaker or energizer for your workshop, training session, or youth programme. Bilingual (EN/FR) facilitation tool.">
+  <title>💥 Movers Companion — Facilitation Toolkit</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+  <!-- Vercel Speed Insights -->
+  <script defer src="/_vercel/speed-insights/script.js"></script>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      margin: 0;
+      font-family: 'DM Sans', 'Segoe UI', -apple-system, BlinkMacSystemFont, sans-serif;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+  </style>
+</head>
+<body>
+  <div id="root"></div>
+  
+  <!-- React and ReactDOM from CDN -->
+  <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+  <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+  
+  <!-- Babel Standalone for JSX -->
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  
+  <!-- Application Code -->
+  <script type="text/babel">
+const { useState, useEffect } = React;
 
 function useGlobalStyles() {
   useEffect(() => {
@@ -17,7 +55,7 @@ const C = {
 
 const T = {
   en: {
-    back:"← Back",     appTitle:"💥 Facilitation Toolkit",
+    back:"← Back", appTitle:"💥 Movers Companion",
     headline1:"Find your next", headline2:"icebreaker", headline3:"or", headline4:"energizer",
     filterTitle:"Tell us what you need!", filterSub:"Answer 5 quick questions → get the most relevant activities", filterTag:"Recommended",
     browseTitle:"Browse all", browseSub:(n)=>`Explore all ${n} activities freely`,
@@ -40,7 +78,7 @@ const T = {
     q5:"What is your space like?", q5o:[{value:"seated",label:"Seated — can't move",sub:"Restaurant, tight classroom"},{value:"limited",label:"Meeting room",sub:"Can stand and move a little"},{value:"open",label:"Open space",sub:"Venue, hall — room to move"},{value:"online",label:"Online / virtual",sub:"Zoom, Teams, etc."}],
   },
   fr: {
-    back:"← Retour",     appTitle:"💥 Facilitation Toolkit",
+    back:"← Retour", appTitle:"💥 Movers Companion",
     headline1:"Trouvez votre prochain", headline2:"brise-glace", headline3:"ou", headline4:"énergisant",
     filterTitle:"Dites-nous ce qu'il vous faut !", filterSub:"Répondez à 5 questions → obtenez les activités les plus pertinentes", filterTag:"Recommandé",
     browseTitle:"Tout parcourir", browseSub:(n)=>`Explorer librement les ${n} activités`,
@@ -144,7 +182,7 @@ function useFavourites() {
   return { favs, toggle, loaded };
 }
 
-export default function App() {
+function App() {
   useGlobalStyles();
   const [lang, setLang] = useState("en");
   const [view, setView] = useState("home");
@@ -453,3 +491,10 @@ function EmptyState({onRetry,t}) {
     </div>
   );
 }
+
+    // Render the app
+    const root = ReactDOM.createRoot(document.getElementById('root'));
+    root.render(<App />);
+  </script>
+</body>
+</html>
