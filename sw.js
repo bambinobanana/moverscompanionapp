@@ -1,4 +1,4 @@
-const CACHE = "facilitation-toolkit-v2";
+const CACHE = "facilitation-toolkit-v7";
 const ASSETS = [
   "/",
   "/index.html",
